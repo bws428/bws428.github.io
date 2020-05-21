@@ -1,0 +1,66 @@
+# Site
+name: "/Zero"
+title: "/Zero"
+description: "/Zero is a Jekyll blog."
+logo: "assets/images/logo.png"
+favicon: "assets/images/favicon.ico"
+baseurl: /
+url: https://bws428.github.io
+
+include: ["_pages"]
+permalink: /:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+authors:
+  brian:
+    name: Brian D. Wendt
+    slug: brian
+    site: https://bws428.github.io
+    avatar: assets/images/brian.jpg
+    bio: "Pilot, engineer, basement hacker."
+    twitter: https://twitter.com/
+
+# Front matter defaults
+defaults:
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: brian
+      avatar: /assets/images/brian.jpg
+
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+
+# Syntax highlighting (we'll use Prism)
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
+# Paginate
+paginate: 10
+
+# Google Analytics
+google_analytics: UA-111522329-3
+
+# Exclude metadata and build time dependencies (like Grunt plugins)
+exclude:
+  [
+    README.markdown,
+    package.json,
+    grunt.js,
+    Gruntfile.js,
+    Gruntfile.coffee,
+    node_modules,
+  ]

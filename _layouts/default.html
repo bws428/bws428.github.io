@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+
+    {% seo %}
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{{ site.favicon | absolute_url }}"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,400i,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 4.5.0 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- Prism syntax highlighting -->
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/prism.css' | absolute_url }}"
+    />
+
+    <!-- KaTeX math formatting -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+      integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+      crossorigin="anonymous"
+    />
+
+    <!-- Theme Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/theme.css' | absolute_url }}"
+    />
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Lunr search -->
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+  </head>
+
+  <body class="{% if page.url == '/' %} homefirstpage {% endif %}">
+    <!-- Navbar -->
+    <nav
+      id="MagicMenu"
+      class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="{{ '/' | absolute_url }}"
+          ><strong>{{ site.title }}</strong></a
+        >
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarColor02"
+          aria-controls="navbarColor02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarColor02">
+          <ul class="navbar-nav mr-auto d-flex align-items-center">
+            {% include menu-header.html %}
+          </ul>
+          <ul class="navbar-nav ml-auto d-flex align-items-center">
+            {% include search-lunr.html %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search Results -->
+    <div id="lunrsearchresults">
+      <ul class="mb-0"></ul>
+    </div>
+
+    <!-- Content -->
+    <main role="main" class="site-content">
+      {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top p-3 text-muted small">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div>
+            <span class="navbar-brand mr-2 mb-0"
+              ><strong>{{ site.title }}</strong></span
+            >
+            <span
+              >Copyright ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script></span
+            >
+          </div>
+          <div>
+            <a class="text-dark ml-1" href="https://github.com/bws428">
+              <i class="fab fa-github"></i> &nbsp; bws428
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    {% include scripts.html %} {% include tracking-footer.html %}
+  </body>
+</html>
