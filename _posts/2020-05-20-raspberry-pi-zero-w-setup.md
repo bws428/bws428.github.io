@@ -42,13 +42,13 @@ Just insert your Micro SD card into your reader, launch the Raspberry Pi Imager,
 
 We've got some configuring to do first. Since we want to be able to access the Pi Zero remotely, rather than plugging in a keyboard, we'll need to set up the WiFi networking and a few other things _prior to the first boot_ of the Pi Zero board. So leave the SD card inserted into your computer for now.
 
-## Raspbian Bootloader Configuration
+## Raspbian Boot Configuration
 
 If the Raspian Lite OS image was successfully burned to the SD card, you should have gotten a "Write Successful" popup from the Raspberry Pi Imager program. In your file browser's "Devices" menu, where previously you would have seen your blank SD card and other mounted drives, you should see two new devices named `boot` and `rootfs`. If you don't see them, try removing and reinserting your SD card into your computer.
 
 {% include image.html file="boot.png" description="New devices 'boot' and 'rootfs'" %}
 
-We are only concerned with the `boot` directory, so open up that directory in your file browser as in the image above. In the next sections, we are going to set up Raspbian for its first boot, by creating and/or editing the following three text files in the `boot` directory:
+We are only concerned with the [`/boot` partition](https://www.raspberrypi.org/documentation/configuration/boot_folder.md), so open up that directory in your file browser as in the image above. In the next sections, we are going to set up Raspbian for its first boot, by creating and/or editing the following three text files in the `boot` directory:
 
 1. &nbsp; `wpa_supplicant.conf` - to configure WiFi
 2. &nbsp; `ssh` - to enable SSH for remote shell access
@@ -166,8 +166,11 @@ I hope this article helps you get started using your Raspberry Pi Zero W. Check 
 
 ### References
 
-- [Raspberry Pi Zero Headless Quick Start](https://learn.adafruit.com/raspberry-pi-zero-creation?view=all)
-- [Setting Up a Headless Raspberry Pi Zero](https://medium.com/@aallan/setting-up-a-headless-raspberry-pi-zero-3ded0b83f274)
-- [Installing Operating System Images](https://www.raspberrypi.org/documentation/installation/installing-images/)
-- [Setting up a Wireless LAN via the Command Line](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
-- [How to setup Raspbian Networking](https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address/37921#37921)
+- Raspberry Pi Docs, [Installing Operating System Images](https://www.raspberrypi.org/documentation/installation/installing-images/)
+- Raspberry Pi Docs, [Setting up a Raspberry Pi Headless](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md)
+- Raspberry Pi Docs, [Setting up a Wireless LAN via the Command Line](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
+- Raspberry Pi Docs, [The boot folder](https://www.raspberrypi.org/documentation/configuration/boot_folder.md)
+- Raspberry Pi Docs, [SSH (Secure Shell)](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md)
+- Raspberry Pi Docs, [config.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
+- Stack Exchange, [How to setup Raspbian Networking](https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address/37921#37921)
+- Adafruit, [Raspberry Pi Zero Headless Quick Start](https://learn.adafruit.com/raspberry-pi-zero-creation?view=all)
