@@ -42,15 +42,29 @@ Read the full details in my [Headless Raspberry Pi Zero W Setup]({% post_url 202
 
 ### 2. Install Pi-hole
 
-The simplest way to get up and running is to use Pi-hole's one-step automated install.
-
-**A word of caution:** as noted in the Pi-hole documentation, [curling and piping to bash](https://pi-hole.net/2016/07/25/curling-and-piping-to-bash) is controversial, so if you'd like to inspect the script before you run it, you may want to follow the instructions for [alternate installation methods](https://github.com/pi-hole/pi-hole/#alternative-install-methods) from the Pi-hole GitHub repo.
+The simplest way to get up and running is to use Pi-hole's one-step automated install. As noted in the Pi-hole documentation, [curling and piping to bash](https://pi-hole.net/2016/07/25/curling-and-piping-to-bash) is controversial, so if you'd like to inspect the script before you run it, you may want to follow the instructions for [alternate installation methods](https://github.com/pi-hole/pi-hole/#alternative-install-methods) from the Pi-hole GitHub repo.
 
 Otherwise, copy and paste the following into a terminal session:
 
 ```bash
 curl -sSL https://install.pi-hole.net | bash
 ```
+
+This will launch the automated installer. Just follow the prompts and you'll be on your way. It takes a few minutes to install, so be patient, and the installer will occasionally need some input from you.
+
+{% include image.html file="pi-hole-install.png" description="Pi-hole Automated Installer" %}
+
+Pi-hole needs a static IP address to function correctly. You can let the installer use whatever dynamic IP address your router has assigned to it, or you can set a different unique address yourself.
+
+{% include image.html file="pi-hole-static.png" description="Pi-hole Requires a Static IP address" %}
+
+When the installer finishes process, you should get a message like the one below.
+
+{% include image.html file="pi-hole-complete.png" description="Pi-hole Installation Complete!" %}
+
+<div class="alert alert-primary" role="alert">
+  <b>Note:</b> Be sure to copy and save your password before closing this screen!
+</div>
 
 ### 3. Configure DNS
 
