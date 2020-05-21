@@ -9,9 +9,9 @@ One of the first projects I wanted to try with my new Raspberry Pi was running [
 
 ## Pi-hole Basics
 
-Pi-hole operates as a [DNS sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole), essentially filtering every DNS request made by devices on your network. Requests for valid web services are returned, while requests for ads are blocked. Pi-hole filters the DNS requests for ads by comparing each request to a blacklist of known ad servers
+Pi-hole operates as a [DNS sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole), essentially filtering every DNS request made by devices on your network. Requests for valid web services are returned, while requests for ads are blocked. Pi-hole filters the DNS requests for ads by comparing each request to a blacklist of known ad servers.
 
-But unlike traditional browser-based adblocking plugins, Pi-hole doesn't just _hide_ the ads a web page returns -- it never requests them in the first place! This makes page loads quicker and reduces network traffic, making everything just feel _zippier_.
+But unlike traditional browser-based adblock plugins, Pi-hole doesn't just _hide_ the ads a web page returns -- it never requests them in the first place! This makes page loads quicker and reduces network traffic, making everything just feel _zippier_.
 
 On top of all that, Pi-hole comes with a nifty admin dashboard that shows you in real time all the requests made on your network, which devices are making the queries, and how many queries have been blocked.
 
@@ -25,7 +25,7 @@ It's a simple three-step process to get Pi-hole running on your home network:
 2. Install the Pi-hole software
 3. Configure Pi-hole as your DNS server
 
-I'll be using a Raspbery Pi for my Pi-hole server, and running it on a Google WiFi mesh network, which adds a few challenges to the setup.
+I'll be using a Raspberry Pi for my Pi-hole server, and running it on a Google WiFi mesh network, which adds a few challenges to the setup.
 
 ### 1. Installing an Operating System
 
@@ -42,9 +42,9 @@ Read the full details in my [Headless Raspberry Pi Zero W Setup]({% post_url 202
 
 ### 2. Install Pi-hole
 
-The simplest way to get up and running is to use Pi-hole's one-step automated install. As noted in the Pi-hole documentation, [curling and piping to bash](https://pi-hole.net/2016/07/25/curling-and-piping-to-bash) is controversial, so if you'd like to inspect the script before you run it, you may want to follow the instructions for [alternate installation methods](https://github.com/pi-hole/pi-hole/#alternative-install-methods) from the Pi-hole GitHub repo.
+The simplest way to get up and running is to use Pi-hole's one-step automated install. As noted in the Pi-hole documentation, [curling and piping to bash](https://pi-hole.net/2016/07/25/curling-and-piping-to-bash) is controversial, so if you'd like to inspect the script before you run it, you may want to follow the instructions for [alternate installation methods](https://github.com/pi-hole/pi-hole/#alternative-install-methods).
 
-Otherwise, copy and paste the following into a terminal session:
+Otherwise, paste the following command into a terminal session on your Pi:
 
 ```bash
 curl -sSL https://install.pi-hole.net | bash
@@ -63,7 +63,7 @@ When the installer finishes, you should get a message like the one below.
 {% include image.html file="pi-hole-complete.png" %}
 
 <div class="alert alert-primary" role="alert">
-  <b>Note:</b> Be sure to copy and save your login password before closing this screen!
+  <b>Note:</b> Be sure to save your login password before closing this screen!
 </div>
 
 ### 3. Configure DNS
@@ -80,6 +80,8 @@ or
 
 ![Screenshot](https://piholenet.b-cdn.net/wp-content/uploads/2018/12/Screenshot-2018-12-19-17.39.58.png)
 
+{% include image.html file="pi-hole-google.jpg" description="Pi-hole and Google WiFi living in harmony" %}
+
 ---
 
 ### References
@@ -87,8 +89,6 @@ or
 - https://docs.pi-hole.net/
 
 - Adafruit, [Pi Hole Ad Blocker with Pi Zero W](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/install-pi-hole)
-
-- [Pi-hole Setup on Raspberry Pi Zero W](http://blog.deadlypenguin.com/blog/2019/02/11/pi-hole-setup-raspberry-pi-zero/)
 
 - https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address
 
