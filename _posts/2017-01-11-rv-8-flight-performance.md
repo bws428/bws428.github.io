@@ -572,23 +572,15 @@ plot_max_speed(V, 8000, V_range_8, io360_bhp[8000], eta_8)
 
 <h3 id="ref">References</h3>
 
-[ 1 ] R. D. Kimberlin, _Flight Testing of Fixed-Wing Aircraft_. Reston, Va.: AIAA, 2003.
-
-[ 2 ] D. P. Raymer, _Aircraft Design: A Conceptual Approach_. Reston, Va: AIAA, 4th ed., 2006.
-
-[ 3 ] J. D. Anderson, _Introduction to Flight_. New York: McGraw-Hill, 5th ed., 2005.
-
-[ 4 ] J. D. Mattingly and K. M. Boyer, _Elements of Propulsion: Gas Turbines and Rockets_. Reston, Va.: AIAA, 2nd ed., 2016.
-
-[ 5 ] M. Nita and D. Scholz, “Estimating the Oswald Factor from Basic Aircraft Geometrical Parameters,” in _German Aerospace Congress_, pp. 1–19, Dec. 2012.
-
-[ 6 ] C. E. Jobe, “Prediction of Aerodynamic Drag,” _Tech. Rep. AFWAL-TM-84-203_, Air Force Wright Aeronautical Laboratories, July 1984.
-
-[ 7 ] C. M. Jackson Jr., “Estimation of Flight Performance with Closed-Form Approximations to the Equations of Motion,” pp. 1–33, Mar. 2001.
-
-[ 8 ] I. H. Abbot, A. E. Von Doenhoff, and L. S. Stivers Jr., _Summary of Airfoil Data_. NACA: National Advisory Committee for Aeronautics, 1945.
-
-[ 9 ] U. P. Solies, “Numerical method for estimation of propeller efficiencies,” _Journal of Aircraft_, vol. 31, pp. 996–998, July 1994.
+1. R. D. Kimberlin, _Flight Testing of Fixed-Wing Aircraft_. Reston, Va.: AIAA, 2003.
+1. D. P. Raymer, _Aircraft Design: A Conceptual Approach_. Reston, Va: AIAA, 4th ed., 2006.
+1. J. D. Anderson, _Introduction to Flight_. New York: McGraw-Hill, 5th ed., 2005.
+1. J. D. Mattingly and K. M. Boyer, _Elements of Propulsion: Gas Turbines and Rockets_. Reston, Va.: AIAA, 2nd ed., 2016.
+1. M. Nita and D. Scholz, “Estimating the Oswald Factor from Basic Aircraft Geometrical Parameters,” in _German Aerospace Congress_, pp. 1–19, Dec. 2012.
+1. C. E. Jobe, “Prediction of Aerodynamic Drag,” _Tech. Rep. AFWAL-TM-84-203_, Air Force Wright Aeronautical Laboratories, July 1984.
+1. C. M. Jackson Jr., “Estimation of Flight Performance with Closed-Form Approximations to the Equations of Motion,” pp. 1–33, Mar. 2001.
+1. I. H. Abbot, A. E. Von Doenhoff, and L. S. Stivers Jr., _Summary of Airfoil Data_. NACA: National Advisory Committee for Aeronautics, 1945.
+1. U. P. Solies, “Numerical method for estimation of propeller efficiencies,” _Journal of Aircraft_, vol. 31, pp. 996–998, July 1994.
 
 ### Author's Note
 

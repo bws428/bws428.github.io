@@ -5,7 +5,7 @@ categories: electronics
 tags: ["raspberry pi", featured]
 ---
 
-The [Pi-hole](https://pi-hole.net/)<sup>®</sup> is a DNS sinkhole that protects your devices from unwanted content, without installing any client-side software." (like browser-plugin adblockers, etc.)
+Tired of pesky Internet advertisements? Who isn't? The [Pi-hole](https://pi-hole.net/)<sup>®</sup> is a DNS sinkhole that protects your devices from unwanted content, without installing any client-side software." (like browser-plugin adblockers, etc.)
 
 Pi-hole® - A black hole for Internet Ads
 
