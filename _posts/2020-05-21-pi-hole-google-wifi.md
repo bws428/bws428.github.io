@@ -1,5 +1,5 @@
 ---
-title: Pi-hole on Google WiFi
+title: Pi-hole on Google Wifi
 image: assets/images/pi-hole-bg.jpg
 categories: electronics
 tags: ["raspberry pi", featured]
@@ -19,15 +19,14 @@ On top of all that, Pi-hole comes with a nifty admin dashboard that shows you in
 
 ## Installing Pi-hole
 
-It's a simple three-step process to get Pi-hole running on your home network:
+It's a simple process to get Pi-hole running on your Google Wifi network:
 
-1. Install a supported OS
-2. Install the Pi-hole software
-3. Configure Pi-hole as your DNS server
+1. Setup the Raspberry Pi
+1. Assign the Pi a static IP address
+1. Install the Pi-hole software
+1. Configure Pi-hole as your DNS server
 
-I'll be using a Raspberry Pi for my Pi-hole server, and running it on a Google WiFi mesh network, which adds a few challenges to the setup.
-
-### 1. Installing an Operating System
+### 1. Setup the Raspberry Pi
 
 Required equipment for my setup is as follows:
 
@@ -40,7 +39,21 @@ I did all the setup of my Pi Zero W in "headless" mode, so there was no need for
 
 Read the full details in my [Headless Raspberry Pi Zero W Setup]({% post_url 2020-05-20-raspberry-pi-zero-w-setup %}) article.
 
-### 2. Install Pi-hole
+After I had my new Pi Zero up and running, I used the `raspi-config` tool to change the the hostname from `raspberrypi` to `pi-hole` to differentiate it from other Raspberry Pi devices on the network.
+
+### 2. Assign the Pi-hole a Static IP Address
+
+> Option 2: DHCP enabled on Google WiFi, DHCP enabled on Pi-Hole: Google WiFi only gives an IP address to the Raspberry Pi, while the devices that connect to the Google WiFi will receive the IP address from the Raspberry Pi.
+
+- Google Wifi app on your phone
+
+`Devices > pi-hole > Reserve IP`
+
+{% include image.html file="wifi-ip-reservation.png" %}
+
+Restart your Pi.
+
+### 3. Install Pi-hole
 
 The simplest way to get up and running is to use Pi-hole's one-step automated install. As noted in the Pi-hole documentation, [curling and piping to bash](https://pi-hole.net/2016/07/25/curling-and-piping-to-bash) is controversial, so if you'd like to inspect the script before you run it, you may want to follow the instructions for [alternate installation methods](https://github.com/pi-hole/pi-hole/#alternative-install-methods).
 
@@ -54,7 +67,7 @@ This will launch the automated installer. Just follow the prompts and you'll be 
 
 {% include image.html file="pi-hole-install.png" %}
 
-Pi-hole needs a static IP address to function correctly. You can let the installer use whatever dynamic IP address your router has assigned to it, or you can set a different unique address yourself.
+Pi-hole needs a static IP address to function correctly. You can let the installer use whatever dynamic IP address your router has assigned to it, or you can set a different unique address yourself. Since
 
 {% include image.html file="pi-hole-static.png" %}
 
@@ -66,7 +79,11 @@ When the installer finishes, you should get a message like the one below.
   <b>Note:</b> Be sure to save your login password before closing this screen!
 </div>
 
-### 3. Configure DNS
+### 4. Configure DNS
+
+`Network & General > Advanced networking > LAN`
+
+{% include image.html file="wifi-lan.png" %}
 
 #### Pi-hole Built-in DHCP Server
 
@@ -78,7 +95,7 @@ or
 192.168.86.XX
 ```
 
-![Screenshot](https://piholenet.b-cdn.net/wp-content/uploads/2018/12/Screenshot-2018-12-19-17.39.58.png)
+{% include image.html file="pi-hole-dhcp-settings.png" %}
 
 {% include image.html file="pi-hole-google.jpg" description="Pi-hole and Google WiFi living in harmony" %}
 
@@ -86,18 +103,9 @@ or
 
 ### References
 
-- https://docs.pi-hole.net/
-
-- Adafruit, [Pi Hole Ad Blocker with Pi Zero W](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/install-pi-hole)
-
-- https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address
-
-- [Google WiFi (1st gen)](https://store.google.com/product/google_wifi_first_gen)
-
-- Simultaneous dual-band Wi-Fi (2.4GHz / 5GHz)
-
-- https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
-
+1. [Pi-hole Documentation](https://docs.pi-hole.net/)
+1. Adafruit, [Pi Hole Ad Blocker with Pi Zero W](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/install-pi-hole)
+1. [Google WiFi (1st gen)](https://store.google.com/product/google_wifi_first_gen)
 1. MBR Reviews, [How to run Pi-Hole with Google WiFi](https://www.mbreviews.com/pi-hole-google-wifi-raspberry-pi/)
 1. Medium, [Setting up Pi-hole and PiVPN on Google WiFi](https://medium.com/@patrikmarin/setting-up-pi-hole-and-pivpn-on-google-wifi-2e8a86947931)
 1. Discourse, [Configuring Your Device's DNS Server](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
