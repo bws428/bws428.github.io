@@ -131,7 +131,7 @@ ping -c 3 raspberrypi.local
 ssh pi@raspberrypi.local
 ```
 
-If these don't work, you can also try to use the Pi's LAN IP address instead of `raspberrypi.local`. You may need to use `nmap` or some similar utility to discover the devices on your local network. Failing that, it may be time to plug in a keyboard and monitor, or [use the console cable to troubleshoot](https://learn.adafruit.com/raspberry-pi-zero-creation/give-it-life).
+If these don't work, you can also try to use the Pi's LAN IP address instead of `raspberrypi.local`. You may need to use `nmap` or some similar utility to [discover the devices](https://www.raspberrypi.org/documentation/remote-access/ip-address.md) on your local network. Failing that, it may be time to plug in a keyboard and monitor, or [use the console cable](https://learn.adafruit.com/raspberry-pi-zero-creation/give-it-life) to troubleshoot.
 
 ## Housekeeping
 
