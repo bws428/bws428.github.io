@@ -5,22 +5,36 @@ categories: electronics
 tags: ["raspberry pi", featured]
 ---
 
-Tired of pesky Internet advertisements? Who isn't? The [Pi-hole](https://pi-hole.net/)<sup>®</sup> is a DNS sinkhole that protects your devices from unwanted content, without installing any client-side software." (like browser-plugin adblockers, etc.)
+One of the first projects I wanted to try with my new Raspberry Pi was running [Pi-hole](https://pi-hole.net/). Pi-hole is a software tool that blocks internet advertisements -- not just on a single web browser, but _on your entire network_.
 
-Pi-hole® - A black hole for Internet Ads
+## Pi-hole Basics
 
-<img class="img-fluid" src="/assets/images/pi-zero-5.png" alt="Demo Image">
-<span class="caption text-muted">A Raspberry Pi Zero W.</span>
+Pi-hole operates as a [DNS sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole), essentially filtering every request made by devices on your network. Requests for valid web services are returned, while requests for ads are blocked. Pi-hole filters the DNS requests for ads by comparing each request to a blacklist of known ad servers
 
-Here is the [Pi-hole](https://pi-hole.net/) three-step setup:
+But unlike traditional browser-based adblocking plugins, Pi-hole doesn't just _hide_ the ads a web page returns -- it never requests them in the first place! This makes page loads quicker and reduces network traffic, making everything just feel _zippier_.
 
-1. Install a supported operating system
-2. Install Pi-hole
+On top of all that, Pi-hole comes with a nifty admin dashboard that shows you in real time all the requests made on your network, which devices are making the queries, and how many queries have been blocked.
+
+{% include image.html file="pi-hole-admin.png" description="Pi-hole Admin Dashboard" %}
+
+## Installing Pi-hole
+
+A basic three-step process for running Pi-hole on your home network:
+
+1. Install a supported OS
+2. Install Pi-hole software
 3. Configure Pi-hole as your DNS server
 
-There's also a step four, VNC, but we ain't doing that at this point.
+I'll be using a Raspbery Pi for my Pi-hole server, and running it on a Google WiFi mesh network, which adds a few challenges to the setup.
 
-Here's the link to the [Pi Zero setup]({% post_url 2020-05-20-raspberry-pi-zero-w-setup %})!
+### 1. Installing an Operating System
+
+Required equipment for my setup is as follows:
+
+- Raspberry Pi Zero W (\$10)
+- 16GB Micro SD Card, Class 10 (\$8)
+- Micro-USB Power Supply, 5V 2.5A (\$5)
+- [Pi Zero Case](https://flirc.tv/more/flirc-raspberry-pi-zero-case) (\$5--\$15)
 
 ## Documentation
 
