@@ -9,7 +9,7 @@ One of the first projects I wanted to try with my new Raspberry Pi was running [
 
 ## Pi-hole Basics
 
-Pi-hole operates as a [DNS sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole), essentially filtering every request made by devices on your network. Requests for valid web services are returned, while requests for ads are blocked. Pi-hole filters the DNS requests for ads by comparing each request to a blacklist of known ad servers
+Pi-hole operates as a [DNS sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole), essentially filtering every DNS request made by devices on your network. Requests for valid web services are returned, while requests for ads are blocked. Pi-hole filters the DNS requests for ads by comparing each request to a blacklist of known ad servers
 
 But unlike traditional browser-based adblocking plugins, Pi-hole doesn't just _hide_ the ads a web page returns -- it never requests them in the first place! This makes page loads quicker and reduces network traffic, making everything just feel _zippier_.
 
