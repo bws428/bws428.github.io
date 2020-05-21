@@ -166,12 +166,11 @@ I hope this article helps you get started using your Raspberry Pi Zero W. Check 
 
 ### References
 
-- Raspberry Pi Docs, [Installing Operating System Images](https://www.raspberrypi.org/documentation/installation/installing-images/)
-- Raspberry Pi Docs, [Setting up a Raspberry Pi Headless](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md)
-- Raspberry Pi Docs, [Remote Access](https://www.raspberrypi.org/documentation/remote-access/README.md)
-- Raspberry Pi Docs, [Setting up a Wireless LAN via the Command Line](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
-- Raspberry Pi Docs, [The boot folder](https://www.raspberrypi.org/documentation/configuration/boot_folder.md)
-- Raspberry Pi Docs, [SSH (Secure Shell)](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md)
-- Raspberry Pi Docs, [config.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
-- Stack Exchange, [How to setup Raspbian Networking](https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address/37921#37921)
-- Adafruit, [Raspberry Pi Zero Headless Quick Start](https://learn.adafruit.com/raspberry-pi-zero-creation?view=all)
+1. Raspberry Pi Docs, [Installing Operating System Images](https://www.raspberrypi.org/documentation/installation/installing-images/)
+1. Raspberry Pi Docs, [Setting up a Raspberry Pi Headless](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md)
+1. Raspberry Pi Docs, [Remote Access](https://www.raspberrypi.org/documentation/remote-access/README.md)
+1. Raspberry Pi Docs, [Setting up a Wireless LAN via the Command Line](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
+1. Raspberry Pi Docs, [The boot folder](https://www.raspberrypi.org/documentation/configuration/boot_folder.md)
+1. Raspberry Pi Docs, [SSH (Secure Shell)](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md)
+1. Raspberry Pi Docs, [config.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
+1. Adafruit, [Raspberry Pi Zero Headless Quick Start](https://learn.adafruit.com/raspberry-pi-zero-creation?view=all)
