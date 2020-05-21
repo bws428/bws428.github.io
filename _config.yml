@@ -1,4 +1,4 @@
-# Site
+# Site details
 name: "/Zero"
 title: "/Zero"
 description: "/Zero is a Jekyll blog."
@@ -7,16 +7,7 @@ favicon: "assets/images/favicon.ico"
 baseurl: /
 url: https://bws428.github.io
 
-include: ["_pages"]
-permalink: /:title/
-
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-seo-tag
-
+# Author details
 authors:
   brian:
     name: Brian D. Wendt
@@ -25,6 +16,19 @@ authors:
     avatar: assets/images/brian.jpg
     bio: "Pilot, engineer, basement hacker."
     twitter: https://twitter.com/
+
+# Permalinks
+permalink: /:title/
+
+# Paginate
+paginate: 8
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
 
 # Front matter defaults
 defaults:
@@ -48,13 +52,13 @@ kramdown:
   syntax_highlighter_opts:
     disable: true
 
-# Paginate
-paginate: 8
-
 # Google Analytics
 google_analytics: UA-111522329-3
 
-# Exclude metadata and build time dependencies (like Grunt plugins)
+# Includes
+include: ["_pages"]
+
+# Excludes
 exclude:
   [
     README.markdown,
