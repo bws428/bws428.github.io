@@ -1,5 +1,5 @@
 /* PrismJS 1.20.0
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+arduino+bash+c+cpp+coffeescript+dart+docker+git+go+graphql+java+json+kotlin+makefile+markdown+processing+python */
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+arduino+bash+c+cpp+coffeescript+dart+django+docker+go+graphql+handlebars+java+json+json5+latex+markup-templating+processing+python+shell-session&plugins=command-line */
 /**
  * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
  * Based on https://github.com/chriskempson/tomorrow-theme
@@ -121,5 +121,39 @@ pre[class*="language-"] {
 
 .token.inserted {
 	color: green;
+}
+
+.command-line-prompt {
+	border-right: 1px solid #999;
+	display: block;
+	float: left;
+	font-size: 100%;
+	letter-spacing: -1px;
+	margin-right: 1em;
+	pointer-events: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.command-line-prompt > span:before {
+	color: #999;
+	content: ' ';
+	display: block;
+	padding-right: 0.8em;
+}
+
+.command-line-prompt > span[data-user]:before {
+	content: "[" attr(data-user) "@" attr(data-host) "] $";
+}
+
+.command-line-prompt > span[data-user="root"]:before {
+	content: "[" attr(data-user) "@" attr(data-host) "] #";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+	content: attr(data-prompt);
 }
 
