@@ -169,7 +169,6 @@ I hope this article helps you get started using your Raspberry Pi Zero W. Check 
 1. Raspberry Pi Docs, [Installing Operating System Images](https://www.raspberrypi.org/documentation/installation/installing-images/)
 1. Raspberry Pi Docs, [Setting up a Raspberry Pi Headless](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md)
 1. Raspberry Pi Docs, [Remote Access](https://www.raspberrypi.org/documentation/remote-access/README.md)
-1. Raspberry Pi Docs, [Setting up a Wireless LAN via the Command Line](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
 1. Raspberry Pi Docs, [The boot folder](https://www.raspberrypi.org/documentation/configuration/boot_folder.md)
 1. Raspberry Pi Docs, [SSH (Secure Shell)](https://www.raspberrypi.org/documentation/remote-access/ssh/README.md)
 1. Raspberry Pi Docs, [config.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
