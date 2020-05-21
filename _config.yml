@@ -49,7 +49,7 @@ kramdown:
     disable: true
 
 # Paginate
-paginate: 10
+paginate: 5
 
 # Google Analytics
 google_analytics: UA-111522329-3
