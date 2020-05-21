@@ -1,11 +1,11 @@
 ---
 title: Pi-hole on Google WiFi
-image: assets/images/pi-hole-bg.png
+image: assets/images/pi-hole-bg.jpg
 categories: electronics
 tags: ["raspberry pi", featured]
 ---
 
-One of the first projects I wanted to try with my new Raspberry Pi was running [Pi-hole](https://pi-hole.net/). Pi-hole is a software tool that blocks internet advertisements -- not just on a single web browser, but _on your entire network_.
+One of the first projects I wanted to try with my new Raspberry Pi was running [Pi-hole](https://pi-hole.net/). Pi-hole is a software tool that blocks internet ads before they ever download -- not just on a single web browser, but _on your entire network_.
 
 ## Pi-hole Basics
 
