@@ -43,11 +43,11 @@ After I had my new Pi Zero up and running, I used the `raspi-config` tool to cha
 
 ### 2. Assign the Pi-hole a Static IP Address
 
-> Option 2: DHCP enabled on Google WiFi, DHCP enabled on Pi-Hole: Google WiFi only gives an IP address to the Raspberry Pi, while the devices that connect to the Google WiFi will receive the IP address from the Raspberry Pi.
+> Option 2: DHCP enabled on Google Wifi, DHCP enabled on Pi-Hole: Google Wifi only gives an IP address to the Raspberry Pi, while the devices that connect to the Google Wifi will receive the IP address from the Raspberry Pi.
 
 - Google Wifi app on your phone
 
-`Devices > pi-hole > Reserve IP`
+`Devices > pi-hole > ⋮ > Reserve IP`
 
 {% include image.html file="wifi-ip-reservation.png" %}
 
@@ -97,7 +97,7 @@ or
 
 {% include image.html file="pi-hole-dhcp-settings.png" %}
 
-{% include image.html file="pi-hole-google.jpg" description="Pi-hole and Google WiFi living in harmony" %}
+{% include image.html file="pi-hole-google.jpg" description="Pi-hole and Google Wifi living in harmony" %}
 
 ---
 
@@ -105,8 +105,8 @@ or
 
 1. [Pi-hole Documentation](https://docs.pi-hole.net/)
 1. Adafruit, [Pi Hole Ad Blocker with Pi Zero W](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/install-pi-hole)
-1. [Google WiFi (1st gen)](https://store.google.com/product/google_wifi_first_gen)
-1. MBR Reviews, [How to run Pi-Hole with Google WiFi](https://www.mbreviews.com/pi-hole-google-wifi-raspberry-pi/)
-1. Medium, [Setting up Pi-hole and PiVPN on Google WiFi](https://medium.com/@patrikmarin/setting-up-pi-hole-and-pivpn-on-google-wifi-2e8a86947931)
+1. [Google Wifi (1st gen)](https://store.google.com/product/google_wifi_first_gen)
+1. MBR Reviews, [How to run Pi-Hole with Google Wifi](https://www.mbreviews.com/pi-hole-google-wifi-raspberry-pi/)
+1. Medium, [Setting up Pi-hole and PiVPN on Google Wifi](https://medium.com/@patrikmarin/setting-up-pi-hole-and-pivpn-on-google-wifi-2e8a86947931)
 1. Discourse, [Configuring Your Device's DNS Server](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
 1. Discourse, [How to use Pi-hole’s Built-in DHCP Server](https://discourse.pi-hole.net/t/how-do-i-use-pi-holes-built-in-dhcp-server-and-why-would-i-want-to/3026)
