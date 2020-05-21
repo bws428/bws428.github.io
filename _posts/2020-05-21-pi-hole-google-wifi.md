@@ -52,11 +52,11 @@ curl -sSL https://install.pi-hole.net | bash
 
 This will launch the automated installer. Just follow the prompts and you'll be on your way. It takes a few minutes to install, so be patient, and the installer will occasionally need some input from you.
 
-{% include image.html file="pi-hole-install.png" description="Pi-hole Automated Installer" %}
+{% include image.html file="pi-hole-install.png" %}
 
 Pi-hole needs a static IP address to function correctly. You can let the installer use whatever dynamic IP address your router has assigned to it, or you can set a different unique address yourself.
 
-{% include image.html file="pi-hole-static.png" description="Pi-hole Requires a Static IP address" %}
+{% include image.html file="pi-hole-static.png" %}
 
 When the installer finishes, you should get a message like the one below.
 
