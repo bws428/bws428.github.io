@@ -58,12 +58,12 @@ Pi-hole needs a static IP address to function correctly. You can let the install
 
 {% include image.html file="pi-hole-static.png" description="Pi-hole Requires a Static IP address" %}
 
-When the installer finishes process, you should get a message like the one below.
+When the installer finishes, you should get a message like the one below.
 
-{% include image.html file="pi-hole-complete.png" description="Pi-hole Installation Complete!" %}
+{% include image.html file="pi-hole-complete.png" %}
 
 <div class="alert alert-primary" role="alert">
-  <b>Note:</b> Be sure to copy and save your password before closing this screen!
+  <b>Note:</b> Be sure to copy and save your login password before closing this screen!
 </div>
 
 ### 3. Configure DNS
