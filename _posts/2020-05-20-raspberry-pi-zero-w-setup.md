@@ -94,7 +94,7 @@ touch ssh
 
 In case for some reason we can't SSH in to the Pi when we first boot it up, we'll want to enable [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) on the GPIO header pins so we have a backup means of communicating with it. You'll also need a [USB to TTL Serial "Console" Cable](https://www.adafruit.com/product/954) to attach to the appropriate GPIO UART pins. If you bought one of the Pi Zero starter kits, you may also have the dongles to simply connect a keyboard and HDMI display. Either way, this step is just a backup.
 
-{% include image.html file="pi-zero-w-gpio-pinout.png" description="Raspberry Pi Zero W GPIO pinout - UART is on pins 14 and 15" %}
+{% include image.html file="pi-zero-w-gpio-pinout.png" description="Pi Zero W GPIO diagram - UART is on GPIO 14 and 15 (pins 8 & 10)" %}
 
 Again in the `boot` directory, open the `config.txt` file in your text editor. This file should already exist, so we'll just need to scroll to the end of the file and add the following text:
 
