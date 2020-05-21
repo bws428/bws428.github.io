@@ -19,10 +19,10 @@ On top of all that, Pi-hole comes with a nifty admin dashboard that shows you in
 
 ## Installing Pi-hole
 
-A basic three-step process for running Pi-hole on your home network:
+It's a simple three-step process to get Pi-hole running on your home network:
 
 1. Install a supported OS
-2. Install Pi-hole software
+2. Install the Pi-hole software
 3. Configure Pi-hole as your DNS server
 
 I'll be using a Raspbery Pi for my Pi-hole server, and running it on a Google WiFi mesh network, which adds a few challenges to the setup.
@@ -35,6 +35,10 @@ Required equipment for my setup is as follows:
 - 16GB Micro SD Card, Class 10 (\$8)
 - Micro-USB Power Supply, 5V 2.5A (\$5)
 - [Pi Zero Case](https://flirc.tv/more/flirc-raspberry-pi-zero-case) (\$5--\$15)
+
+I did all the setup of my Pi Zero W in "headless" mode, so there was no need for plugging in keyboards or displays. I installed the latest Raspbian Lite image rather than a full distro with the desktop GUI, since I'd only be accessing the Pi-hole via SSH or the web-based admin dashboard.
+
+Read the full details in my [Headless Raspberry Pi Zero W Setup]({% post_url 2020-05-20-raspberry-pi-zero-w-setup %}) article.
 
 ### 2. Install Pi-hole
 
