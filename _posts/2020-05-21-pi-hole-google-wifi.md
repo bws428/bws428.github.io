@@ -7,6 +7,8 @@ tags: ["raspberry pi", featured]
 
 One of the first projects I wanted to try with my new Raspberry Pi was running [Pi-hole](https://pi-hole.net/). Pi-hole is a software tool that blocks Internet ads before they ever download -- not just on a single web browser, but _on your entire network_. It's billed as "a black hole for Internet ads."
 
+Since my home network is a first-generation [Google Wifi](https://store.google.com/product/google_wifi_first_gen) mesh network, Pi-hole setup is slightly different than with a garden-variety router.
+
 ## Pi-hole Basics
 
 Pi-hole operates as a [DNS sinkhole](https://en.wikipedia.org/wiki/DNS_sinkhole), essentially filtering every DNS request made by devices on your network. Requests for valid web services are returned, while requests for ads are blocked. Pi-hole filters the DNS requests for ads by comparing each request to a blacklist of known ad servers.
@@ -83,7 +85,7 @@ Next, open the Google Wifi app again and navigate to:
 
 `Settings > Network & General > Advanced networking > LAN`
 
-In the DHCP Address Pool section, set _both_ the Starting IP and the Ending IP address to the static IP address of the Pi-hole. We're going to use the Pi-hole's built-in DHCP server instead of Google Wifi's.
+In the DHCP Address Pool section, set _both_ the "Starting IP" and the "Ending IP" address to the static IP address of the Pi-hole. We're going to use the Pi-hole's built-in DHCP server instead of Google Wifi's.
 
 {% include image.html file="wifi-lan.png" %}
 
@@ -91,11 +93,19 @@ Finally, return to the Pi-hole web dashboard, and navigate to:
 
 `Settings > DHCP`
 
-Under the DHCP Settings tab, check the box next to "DHCP server enabled." Then, under the "Range of IP addresses to hand out," select a suitable range that's either above or below the static IP address of your Pi-hole server. Make sure the range is broad enough to assign addresses to all of the devices on your network.
+In the DHCP Settings section, check the box next to "DHCP server enabled." Then, under the "Range of IP addresses to hand out," select a suitable range that's either above or below the static IP address of your Pi-hole server. Make sure the range is broad enough to include all of the devices on your network.
 
-{% include image.html file="pi-hole-dhcp-settings.png" %}
+{% include image.html file="pi-hole-dhcp-settings.png" description="Enabling the DHCP server on the Pi-hole" %}
+
+After making these changes, you may need to restart the Google Wifi network. Once all devices have reconnected with new DHCP leases, you can test everything by pointing a web browser at [http://pi.hole/admin](http://pi.hole/admin) which should now display the Pi-hole dashboard.
+
+## Troubleshooting
+
+If at any point during setup your phone or computer loses its connection to the network such that you can no longer communicate with the Pi-hole device, you may need to temporarily change the DNS settings on your device to point directly at the Pi-hole rather than `8.8.8.8` or whatever the default setting is. Incidentally, this method also allows you to configure individual devices to either use or bypass the Pi-hole DNS server should it become necessary.
 
 ## Conclusion
+
+Hopefully this article helped you get up and running with Pi-hole on your Google Wifi network, and that the two devices are living harmoniously together. For more information on Pi-hole setup and operation, check out the References section below.
 
 {% include image.html file="pi-hole-google.jpg" description="Pi-hole and Google Wifi living in harmony" %}
 
@@ -103,9 +113,8 @@ Under the DHCP Settings tab, check the box next to "DHCP server enabled." Then, 
 
 ### References
 
-1. [Pi-hole Documentation](https://docs.pi-hole.net/)
 1. Adafruit, [Pi Hole Ad Blocker with Pi Zero W](https://learn.adafruit.com/pi-hole-ad-blocker-with-pi-zero-w/install-pi-hole)
-1. [Google Wifi (1st gen)](https://store.google.com/product/google_wifi_first_gen)
+1.
 1. MBR Reviews, [How to run Pi-Hole with Google Wifi](https://www.mbreviews.com/pi-hole-google-wifi-raspberry-pi/)
 1. Medium, [Setting up Pi-hole and PiVPN on Google Wifi](https://medium.com/@patrikmarin/setting-up-pi-hole-and-pivpn-on-google-wifi-2e8a86947931)
 1. Discourse, [Configuring Your Device's DNS Server](https://discourse.pi-hole.net/t/how-do-i-configure-my-devices-to-use-pi-hole-as-their-dns-server/245)
