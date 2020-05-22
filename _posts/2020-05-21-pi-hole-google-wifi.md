@@ -5,7 +5,7 @@ categories: electronics
 tags: ["raspberry pi", featured]
 ---
 
-One of the first projects I wanted to try with my new Raspberry Pi was running [Pi-hole](https://pi-hole.net/). Pi-hole is a software tool that blocks internet ads before they ever download -- not just on a single web browser, but _on your entire network_. It's billed as a "black hole for Internet ads."
+One of the first projects I wanted to try with my new Raspberry Pi was running [Pi-hole](https://pi-hole.net/). Pi-hole is a software tool that blocks Internet ads before they ever download -- not just on a single web browser, but _on your entire network_. It's billed as "a black hole for Internet ads."
 
 ## Pi-hole Basics
 
@@ -35,27 +35,23 @@ Required equipment for my setup is as follows:
 - Micro-USB Power Supply, 5V 2.5A (\$5)
 - [Pi Zero Case](https://flirc.tv/more/flirc-raspberry-pi-zero-case) (\$5--\$15)
 
-I did all the setup of my Pi Zero W in "headless" mode, so there was no need for plugging in keyboards or displays. I installed the latest Raspbian Lite image rather than a full distro with the desktop GUI, since I'd only be accessing the Pi-hole via SSH or the web-based admin dashboard.
+I set up my Pi Zero in "headless" mode, so there was no need for plugging in keyboards or displays. I installed the latest Raspbian Lite image since I'd only be accessing the Pi-hole via SSH or the web-based admin dashboard. For more details, see my [Headless Raspberry Pi Zero W Setup]({% post_url 2020-05-20-raspberry-pi-zero-w-setup %}) article.
 
-Read the full details in my [Headless Raspberry Pi Zero W Setup]({% post_url 2020-05-20-raspberry-pi-zero-w-setup %}) article.
-
-After I had my new Pi Zero up and running, I used the `raspi-config` tool to change the the hostname from `raspberrypi` to `pi-hole` to differentiate it from other Raspberry Pi devices on the network.
+After I had the Pi Zero up and running, I used the `raspi-config` tool to change the the hostname from `raspberrypi` to `pi-hole` to differentiate it from other Raspberry Pi devices on the network.
 
 ### 2. Assign the Pi-hole a Static IP Address
 
-> Option 2: DHCP enabled on Google Wifi, DHCP enabled on Pi-Hole: Google Wifi only gives an IP address to the Raspberry Pi, while the devices that connect to the Google Wifi will receive the IP address from the Raspberry Pi.
+Since Pi-hole is a server, it needs a static IP address to work properly. By default, Google Wifi uses [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) to dynamically assign IP addresses to devices on the network. Using the Google Wifi app on your phone, you can manually assign a static IP address to any device you choose.
 
-- Google Wifi app on your phone
+Open the Google Wifi app, and from the home network status screen select `Devices > pi-hole > ⋮ > Reserve IP`, where `pi-hole` is whatever hostname you chose for your Raspberry Pi.
 
-`Devices > pi-hole > ⋮ > Reserve IP`
+{% include image.html file="wifi-ip-reservation.png" description="Assigning Pi-hole a Static IP address" %}
 
-{% include image.html file="wifi-ip-reservation.png" %}
-
-Restart your Pi.
+You can leave the existing IP address as your static IP, or you can enter something different -- just make sure that whatever you choose is not already assigned to another device. When you're done, reboot your Raspberry Pi.
 
 ### 3. Install Pi-hole
 
-The simplest way to get up and running is to use Pi-hole's one-step automated install. As noted in the Pi-hole documentation, [curling and piping to bash](https://pi-hole.net/2016/07/25/curling-and-piping-to-bash) is controversial, so if you'd like to inspect the script before you run it, you may want to follow the instructions for [alternate installation methods](https://github.com/pi-hole/pi-hole/#alternative-install-methods).
+The simplest way to get Pi-hole up and running is to use the one-step automated installer. As noted in the documentation, [curling and piping to bash](https://pi-hole.net/2016/07/25/curling-and-piping-to-bash) is controversial, so if you'd like to inspect the script before you run it, you may want to follow the instructions for [alternate installation methods](https://github.com/pi-hole/pi-hole/#alternative-install-methods).
 
 Otherwise, paste the following command into a terminal session on your Pi:
 
