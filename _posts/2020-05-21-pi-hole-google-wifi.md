@@ -69,13 +69,9 @@ The installer will remind you that Pi-hole needs a static IP address. Since you'
 
 {% include image.html file="pi-hole-static.png" %}
 
-When the installer finishes, you should get a message like the one below.
+When the installer finishes, you should get a message like the one below. Be sure to **save your login password** before closing this screen!
 
-{% include image.html file="pi-hole-complete.png" %}
-
-<div class="alert alert-primary" role="alert">
-  <b>Note:</b> Be sure to save your login password before closing this screen!
-</div>
+{% include image.html file="pi-hole-complete.png" description="Installation complete!  Don't forget to save your password!"%}
 
 ### 4. Configure Pi-hole as your DNS Server
 
