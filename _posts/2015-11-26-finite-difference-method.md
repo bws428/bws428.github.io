@@ -25,10 +25,7 @@ sns.set_style("ticks")
 
 ## Beam Deflection Problem
 
-<figure>
-  <img src="http://media.aeropunk.com/misc/beam.png" alt="Loaded Beam">
-  <figcaption><b>Figure 1.</b> Uniformly-loaded beam (Chapra, p. 639).</figcaption>
-</figure>
+{% include image.html file="beam.png" description="Figure 1. Uniformly-loaded beam (Chapra, p. 639)." %}
 
 The basic differential equation of the elastic curve for a simply supported, uniformly loaded beam (Fig. 1) is given as
 
@@ -109,6 +106,4 @@ sns.despine()
 plt.show()
 {% endhighlight %}
 
-<figure>
-  <img src="http://media.aeropunk.com/misc/beam_plot.png" alt="Loaded Beam">
-</figure>
+{% include image.html file="beam_plot.png" description="Loaded Beam" %}
