@@ -19,7 +19,7 @@ On top of all that, Pi-hole comes with a nifty admin dashboard that shows you in
 
 {% include image.html file="pi-hole-admin.png" description="Pi-hole Admin Dashboard" %}
 
-## Installing Pi-hole
+## Getting Pi-hole
 
 It's a simple process to get Pi-hole running on your Google Wifi network:
 
