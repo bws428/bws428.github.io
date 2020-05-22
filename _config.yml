@@ -1,7 +1,7 @@
 # Site details
-name: "/Zero"
-title: "/Zero"
-description: "/Zero is a Jekyll blog."
+name: "/ Zero"
+title: "/ Zero"
+description: "Tinker, test, repeat."
 logo: "assets/images/logo.png"
 favicon: "assets/images/favicon.ico"
 baseurl: /

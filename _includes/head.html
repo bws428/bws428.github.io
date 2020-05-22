@@ -5,10 +5,16 @@
     content="width=device-width, initial-scale=1, shrink-to-fit=no"
   />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>{{ page.title }} | {{ site.title }}</title>
+
+  {% if page.url == '/' %}
+  <title>{{ site.title }} - {{ site.description }}</title>
+  {% else %}
+  <title>{{ page.title }} - {{ site.title }}</title>
+  {% endif %}
 
   {% seo %}
 
+  <!-- Favicon -->
   <link
     rel="shortcut icon"
     type="image/x-icon"

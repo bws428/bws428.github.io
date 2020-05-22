@@ -5,7 +5,7 @@ categories: electronics
 tags: ["raspberry pi", featured]
 ---
 
-One of the first projects I wanted to try with my new Raspberry Pi was running [Pi-hole](https://pi-hole.net/). Pi-hole is a software tool that blocks internet ads before they ever download -- not just on a single web browser, but _on your entire network_.
+One of the first projects I wanted to try with my new Raspberry Pi was running [Pi-hole](https://pi-hole.net/). Pi-hole is a software tool that blocks internet ads before they ever download -- not just on a single web browser, but _on your entire network_. It's billed as a "black hole for Internet ads."
 
 ## Pi-hole Basics
 
