@@ -101,7 +101,7 @@ If at any point during setup your phone or computer loses its connection to the 
 
 ## Conclusion
 
-Hopefully this article helped you get up and running with Pi-hole on your Google Wifi network, and that the two devices are living harmoniously together. For more information on Pi-hole setup and operation, check out the [Pi-hole Docs](https://docs.pi-hole.net/), or the links in the References section below.
+Hopefully this article helped you get up and running with Pi-hole on your Google Wifi network, and that the two devices are living harmoniously together. For more information on Pi-hole setup and operation, check out the [Pi-hole Docs](https://docs.pi-hole.net/), or follow the links in the References section below.
 
 {% include image.html file="pi-hole-google.jpg" description="Pi-hole and Google Wifi living in harmony" %}
 
