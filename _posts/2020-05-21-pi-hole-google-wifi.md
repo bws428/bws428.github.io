@@ -75,25 +75,27 @@ When the installer finishes, you should get a message like the one below.
   <b>Note:</b> Be sure to save your login password before closing this screen!
 </div>
 
-### 4. Configure Pi-hole as your DNS server
+### 4. Configure Pi-hole as your DNS Server
 
-The first thing you'll want to do once you get Pi-hole installed is to access the Admin dashboard from another computer on the network, just to make sure everything is working properly. Point your web browser to the static IP address you created for the Pi-hole, and you should see the web interface. For example, in my case Pi-hole lives at `http://192.168.86.10/admin/`. Note: the short domain name `http://pi.hole/admin/` likely won't work until we finish the DNS setup.
+The first thing you'll want to do once you get Pi-hole installed is to access the Admin dashboard from another computer on the network, just to make sure everything is working properly. Point your web browser to the static IP address you created for the Pi-hole, and you should see the web interface. For example, in my case Pi-hole lives at `http://192.168.86.10/admin/`. (Note: The domain name `http://pi.hole/admin/` won't work until after we finish the DNS setup.)
 
-`Network & General > Advanced networking > LAN`
+Next, open the Google Wifi app again and navigate to:
+
+`Settings > Network & General > Advanced networking > LAN`
+
+In the DHCP Address Pool section, set _both_ the Starting IP and the Ending IP address to the static IP address of the Pi-hole. We're going to use the Pi-hole's built-in DHCP server instead of Google Wifi's.
 
 {% include image.html file="wifi-lan.png" %}
 
-Pi-hole Built-in DHCP Server
+Finally, return to the Pi-hole web dashboard, and navigate to:
 
-```bash
-http://pi.hole/
+`Settings > DHCP`
 
-or
-
-192.168.86.XX
-```
+Under the DHCP Settings tab, check the box next to "DHCP server enabled." Then, under the "Range of IP addresses to hand out," select a suitable range that's either above or below the static IP address of your Pi-hole server. Make sure the range is broad enough to assign addresses to all of the devices on your network.
 
 {% include image.html file="pi-hole-dhcp-settings.png" %}
+
+## Conclusion
 
 {% include image.html file="pi-hole-google.jpg" description="Pi-hole and Google Wifi living in harmony" %}
 
