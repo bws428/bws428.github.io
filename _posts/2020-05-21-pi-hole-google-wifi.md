@@ -63,7 +63,7 @@ This will launch the automated installer. Just follow the prompts and you'll be 
 
 {% include image.html file="pi-hole-install.png" %}
 
-Pi-hole needs a static IP address to function correctly. You can let the installer use whatever dynamic IP address your router has assigned to it, or you can set a different unique address yourself. Since
+The installer will remind you that Pi-hole needs a static IP address. Since you've already assigned one to your Raspberry Pi, the current network settings should be correct. Trust, but verify.
 
 {% include image.html file="pi-hole-static.png" %}
 
@@ -75,13 +75,15 @@ When the installer finishes, you should get a message like the one below.
   <b>Note:</b> Be sure to save your login password before closing this screen!
 </div>
 
-### 4. Configure DNS
+### 4. Configure Pi-hole as your DNS server
+
+The first thing you'll want to do once you get Pi-hole installed is to access the Admin dashboard from another computer on the network, just to make sure everything is working properly. Point your web browser to the static IP address you created for the Pi-hole, and you should see the web interface. For example, in my case Pi-hole lives at `http://192.168.86.10/admin/`. Note: the short domain name `http://pi.hole/admin/` likely won't work until we finish the DNS setup.
 
 `Network & General > Advanced networking > LAN`
 
 {% include image.html file="wifi-lan.png" %}
 
-#### Pi-hole Built-in DHCP Server
+Pi-hole Built-in DHCP Server
 
 ```bash
 http://pi.hole/
