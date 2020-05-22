@@ -30,14 +30,14 @@ It's a simple process to get Pi-hole running on your Google Wifi network:
 
 ### 1. Setup the Raspberry Pi
 
-Required equipment for my setup is as follows:
+Required equipment for this setup is as follows:
 
 - Raspberry Pi Zero W (\$10)
 - 16GB Micro SD Card, Class 10 (\$8)
 - Micro-USB Power Supply, 5V 2.5A (\$5)
 - [Pi Zero Case](https://flirc.tv/more/flirc-raspberry-pi-zero-case) (\$5--\$15)
 
-I set up my Pi Zero in "headless" mode, so there was no need for plugging in keyboards or displays. I installed the latest Raspbian Lite image since I'd only be accessing the Pi-hole via SSH or the web-based admin dashboard. For more details, see my [Headless Raspberry Pi Zero W Setup]({% post_url 2020-05-20-raspberry-pi-zero-w-setup %}) article.
+I set up my Pi Zero in "headless" mode, so there was no need for plugging in keyboards or displays. I installed the latest Raspbian Lite image since I'd only be accessing the Pi-hole via SSH or the web-based admin dashboard. For more details, see the [Headless Raspberry Pi Zero W Setup]({% post_url 2020-05-20-raspberry-pi-zero-w-setup %}) article.
 
 After I had the Pi Zero up and running, I used the `raspi-config` tool to change the the hostname from `raspberrypi` to `pi-hole` to differentiate it from other Raspberry Pi devices on the network.
 
