@@ -37,7 +37,7 @@ where $E=$ the modulus of elasticity, and $I=$ the moment of inertia. The bounda
 
 ## Analytical Solution
 
-{% highlight python %}
+```python
 def y(x):
 """
 Vertical deflection, y, of the beam in 10E-5 m.
@@ -48,62 +48,65 @@ w = 15 _ 1000 # N/m
 L = 3 # m
 return ((w*L*x**3)/(12*E*I) - (w\*x**4)/(24*E*I) - \
  (w*x*L**3)/(24*E*I)) \* 10**5
-{% endhighlight %}
+```
 
 ## Central Difference Method
 
-{% highlight python %}
+```python
 def cdiff_beam(L,ya,yb,n):
-"""
-Approximate vertical deflection, y, of the beam in 10E-5 m,
-using central difference method.
-Args:
-L = length of the beam, m
-ya = vertical deflection at x = 0
-yb = vertical deflection at x = L
-n = desired number of interior segments
+    """
+    Approximate vertical deflection, y, of the beam in 10E-5 m,
+    using central difference method.
+    Args:
+    L = length of the beam, m
+    ya = vertical deflection at x = 0
+    yb = vertical deflection at x = L
+    n = desired number of interior segments
 
-"""
-E = 200 _ 10**9 # Pa
-I = 30000 / 100**4 # m^4
-w = 15 _ 1000 # N/m
-i = 0
-x = 0
-dx = L/n
-X = [x]
-A = np.zeros(shape=(n+1,n+1))
-b = np.zeros(shape=(n+1,1))
-while i < n-1:
-i = i + 1
-x = x + dx
-b[i] = dx**2 * (1/(2*E*I)) * (w*L*x - w\*x**2)
-A[i][i] = -2
-if i < n:
-A[i][i+1] = 1
-A[i][i-1] = 1
-X = np.append(X, x)
-A[0][0] = 1
-A[n][n] = 1
-b[0] = ya
-b[n] = yb
-X = np.append(X, x+dx)
-Y = np.linalg.solve(A,b) # print(A); print(b)
-return X, Y
-{% endhighlight %}
+    """
+    E = 200 _ 10**9 # Pa
+    I = 30000 / 100**4 # m^4
+    w = 15 _ 1000 # N/m
+    i = 0
+    x = 0
+    dx = L/n
+    X = [x]
+    A = np.zeros(shape=(n+1,n+1))
+    b = np.zeros(shape=(n+1,1))
+
+    while i < n-1:
+        i = i + 1
+        x = x + dx
+        b[i] = dx**2 * (1/(2*E*I)) * (w*L*x - w\*x**2)
+        A[i][i] = -2
+    if i < n:
+        A[i][i+1] = 1
+        A[i][i-1] = 1
+    X = np.append(X, x)
+    A[0][0] = 1
+    A[n][n] = 1
+    b[0] = ya
+    b[n] = yb
+
+    X = np.append(X, x+dx)
+    Y = np.linalg.solve(A,b)
+    # print(A); print(b)
+    return X, Y
+```
 
 ## Plot of Solutions
 
-{% highlight python %}
+```python
 x = np.linspace(0,3)
 X,Y = cdiff_beam(3,0,0,8)
 
 plt.plot(x,y(x), lw=7, alpha=0.6, label="Analytical Solution")
-plt.plot(X,Y\*10\*\*5, "o-", lw=2, ms=8, color="#c44e52", label="Finite Difference Method")
+plt.plot(X,Y*10**5, "o-", lw=2, ms=8, color="#c44e52", label="Finite Difference Method")
 plt.legend(bbox_to_anchor=[0.665, 0.81])
 plt.xlabel("distance, $x$ (m)")
 plt.ylabel("deflection, $y$ (10$^{-5}$ m)")
 sns.despine()
 plt.show()
-{% endhighlight %}
+```
 
 {% include image.html file="beam_plot.png" description="Loaded Beam" %}
