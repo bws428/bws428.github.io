@@ -120,13 +120,15 @@ print("Air density at {:,.0f} ft = {:,.6f} slugs/ft^3 (Python ambiance.Atmospher
 
 Equations from Anderson [3].
 
-$$
+<!-- prettier-ignore -->
+\begin{equation} \tag{6.17}
 C_L = \frac{W}{\frac{1}{2} \rho_{\infty} V_{\infty}^2 S}
-$$
+\end{equation}
 
-$$
+<!-- prettier-ignore -->
+\begin{equation} \tag{6.1c}
 C_D = C_{D,0} + \frac{C_L^2}{\pi e AR}
-$$
+\end{equation}
 
 ```python
 def plot_drag_polar():
@@ -186,21 +188,25 @@ plot_drag_polar()
 
 Equations from Anderson [3].
 
-$$
-T = D = q_{\infty} S C_D
-$$
+<!-- prettier-ignore -->
+\begin{equation} \tag{6.13}
+  T = D = q_{\infty} S C_D
+\end{equation}
 
-$$
-L = W = q_{\infty} S C_D
-$$
+<!-- prettier-ignore -->
+\begin{equation} \tag{6.14}
+  L = W = q_{\infty} S C_D
+\end{equation}
 
-$$
-\frac{T}{W} = \frac{C_D}{C_L}
-$$
+<!-- prettier-ignore -->
+\begin{equation} \tag{6.15}
+  \frac{T}{W} = \frac{C_D}{C_L}
+\end{equation}
 
-$$
-T_R = \frac{W}{C_L/C_D}
-$$
+<!-- prettier-ignore -->
+\begin{equation} \tag{6.16}
+  T_R = \frac{W}{C_L/C_D}
+\end{equation}
 
 ```python
 def plot_thrust_required(V, Max_Alt=0, min_color="#4c72b0", drag_curves=False, best_range=False):
