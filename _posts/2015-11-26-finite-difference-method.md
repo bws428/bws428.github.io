@@ -2,9 +2,9 @@
 title: "Finite Difference Method"
 description: A numerical solution to an ODE using Python
 date: 2015-11-26
+image: assets/images/beam_plot.png
 category: Engineering
 tags: [python, jupyter]
-include: mathjax
 ---
 
 This document uses the open source [Jupyter Notebook](http://jupyter.org/) and the Python programming language to demonstrate a finite difference [numerical method](https://en.wikipedia.org/wiki/Finite_difference_method) for solving a differential equation.

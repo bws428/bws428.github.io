@@ -2,7 +2,8 @@
 title: "3D Statics Problem"
 description: Linear algebra using Python and numpy
 date: 2015-12-08 18:20:33
-category: Engineering
+image: assets/images/statics_3_076.png
+categories: Engineering
 tags: [python, jupyter]
 ---
 
@@ -115,9 +116,9 @@ T_BE = T[2]
 
 # Reaction forces at O
 
-Ox = -T_AC _ uAC[0]
-Oy = -T_AC _ uAC[1] - T_BD _ uBD[1] - W[1]
-Oz = -T_AC _ uAC[2] - T_BD _ uBD[2] - T_BE _ uBE[2]
+Ox = -T*AC * uAC[0]
+Oy = -T*AC * uAC[1] - T*BD * uBD[1] - W[1]
+Oz = -T*AC * uAC[2] - T*BD * uBD[2] - T*BE * uBE[2]
 {% endhighlight %}
 
 {% highlight python %}
