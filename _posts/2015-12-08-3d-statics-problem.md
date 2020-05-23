@@ -13,118 +13,96 @@ The following three-dimensional statics problem is taken from the book _Engineer
 
 The light right-angle boom which supports the 410-kg cylinder is supported by three cables and a ball-and-socket joint at O attached to the vertical x-y surface. Determine the reactions at O and the cable tensions.
 
-{% include image.html file="statics_3_076.png" description="Figure 1. Right-Angle Boom and Cylinder" %}
-
 <!-- more -->
 
-{% highlight python %}
+```python
 import numpy as np
+```
 
-# Set output precision
-
-%precision 3
-{% endhighlight %}
-
-{% highlight python %}
-
+```python
 # Mass on a string (kg)
-
 m = 410
 
 # Position vectors of each point
-
 # (Point G is where the mass string is tied to the boom)
-
 A = np.array([ 0.00, 0.0, 2.7])
 B = np.array([ 1.10, 0.0, 2.7])
 C = np.array([-0.80, 0.9, 0.0])
 D = np.array([ 1.10, 1.8, 0.0])
 E = np.array([ 1.10, 0.0, 0.0])
 G = np.array([ 0.55, 0.0, 2.7])
-{% endhighlight %}
+```
 
-{% highlight python %}
-
+```python
 # Weight force vector
-
 W = np.array([0, -m*9.81, 0])
 
 # Radius vectors
-
 OA = A
 OG = G
 OB = B
 
 # Tension vectors
-
 AC = C - A
 BD = D - B
 BE = E - B
-{% endhighlight %}
+```
 
-{% highlight python %}
-
+```python
 # Tension unit vectors
-
 uAC = AC / np.linalg.norm(AC)
 uBD = BD / np.linalg.norm(BD)
 uBE = BE / np.linalg.norm(BE)
-{% endhighlight %}
+```
 
-{% highlight python %}
-
+```python
 # Create a 3x3 matrix
-
 M = np.zeros(shape=(3,3))
-{% endhighlight %}
+```
 
-{% highlight python %}
-
+```python
 # Populate cols of matrix with moment vectors
-
 M[:,0] = np.cross(OA, uAC)
 M[:,1] = np.cross(OB, uBD)
 M[:,2] = np.cross(OB, uBE)
+
 print(M)
-{% endhighlight %}
+```
 
     [[-0.822 -1.498 -0.   ]
      [-0.731  0.915  1.1  ]
      [ 0.     0.61   0.   ]]
 
-{% highlight python %}
-
+```python
 # The three tension moments must cancel the weight moment
-
 w = -np.cross(OG, W)
+
 print(w)
-{% endhighlight %}
+```
 
     [-10859.67      -0.      2212.155]
 
-{% highlight python %}
-
+```python
 # Solve the matrix for the tension magnitudes
-
 T = np.linalg.solve(M,w)
+
 T_AC = T[0]
 T_BD = T[1]
 T_BE = T[2]
-{% endhighlight %}
+```
 
-{% highlight python %}
-
+```python
 # Reaction forces at O
+Ox = -T_AC * uAC[0]
+Oy = -T_AC * uAC[1] - T_BD * uBD[1] - W[1]
+Oz = -T_AC * uAC[2] - T_BD * uBD[2] - T_BE * uBE[2]
+```
 
-Ox = -T*AC * uAC[0]
-Oy = -T*AC * uAC[1] - T*BD * uBD[1] - W[1]
-Oz = -T*AC * uAC[2] - T*BD * uBD[2] - T*BE * uBE[2]
-{% endhighlight %}
-
-{% highlight python %}
-print("T_AC = {} N\nT_BD = {} N\nT_BE = {} N\n".format(T_AC,T_BD,T_BE))
-print("Ox = {} N\nOy = {} N\nOz = {} N".format(Ox,Oy,Oz))
-{% endhighlight %}
+```python
+# Final results
+print("T_AC = {:0.1f} N\nT_BD = {:0.1f} N\nT_BE = {:0.1f} N\n".format(T_AC,T_BD,T_BE))
+print("Ox = {:0.1f} N \nOy = {:0.1f} N \nOz = {:0.1f} N".format(Ox,Oy,Oz))
+```
 
     T_AC =  6606.0 N
     T_BD =  3625.5 N
