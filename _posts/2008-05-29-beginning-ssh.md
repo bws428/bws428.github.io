@@ -212,14 +212,14 @@ To increase the security of your SSH session, or to set up passwordless authenti
 To generate a public/private key pair on your local machine, open a terminal and type:
 
 ```bash
-ssh-keygen -t dsa
+ssh-keygen -t rsa
 ```
 
 You’ll see the following message:
 
 ```bash
 Generating public/private dsa key pair.
-Enter file in which to save the key (~/.ssh/id_dsa):
+Enter file in which to save the key (~/.ssh/id_rsa):
 ```
 
 Hit `Enter`. This selects the default location. Next you’ll see:
@@ -241,16 +241,16 @@ Enter same passphrase again:
 Enter the same passphrase again. And finally:
 
 ```bash
-Your identification has been saved in ~/.ssh/id_dsa.
-Your public key has been saved in ~/.ssh/id_dsa.pub.
+Your identification has been saved in ~/.ssh/id_rsa.
+Your public key has been saved in ~/.ssh/id_rsa.pub.
 The key fingerprint is:
 42:ac:8a:81:31:81:e5:7b:d2:01:42:2d:64:32:0f:dd localuser@localhost
 ```
 
-Now copy your public key, which is stored in the local file `~/.ssh/id_dsa.pub` to the remote machine, by running the following command from a _local terminal session:_
+Now copy your public key, which is stored in the local file `~/.ssh/id_rsa.pub` to the remote machine, by running the following command from a _local terminal session:_
 
 ```bash
-ssh-copy-id -i ~/.ssh/id_dsa.pub remoteuser@remote.host
+ssh-copy-id -i ~/.ssh/id_rsa.pub remoteuser@remote.host
 ```
 
 You’ll be prompted for the `remoteuser`‘s password one last time, and then you’ll see the message:
@@ -266,26 +266,26 @@ to make sure we haven't added extra keys that you weren't expecting.
 **MacOSX Users:** If the `ssh-copy-id` method doesn’t work with your version of OpenSSH, try the following command:
 
 ```bash
-cat ~/.ssh/id_dsa.pub | ssh remoteuser@remote.host 'cat >> .ssh/authorized_keys'
+cat ~/.ssh/id_rsa.pub | ssh remoteuser@remote.host 'cat >> .ssh/authorized_keys'
 ```
 
 Or, if the `~/.ssh` directory doesn’t yet exist on the remote machine, you can create the directory _and_ copy the public key all in one swell foop, like so:
 
 ```bash
-cat ~/.ssh/id_dsa.pub | ssh remoteuser@remote.host 'mkdir .ssh; cat >> .ssh/authorized_keys'
+cat ~/.ssh/id_rsa.pub | ssh remoteuser@remote.host 'mkdir .ssh; cat >> .ssh/authorized_keys'
 ```
 
 Once the `~/.ssh/authorized_keys` file on the remote machine contains your public key, you’ll be prompted for your passphrase at each login attempt, rather than the `remoteuser`‘s system password, like so:
 
 ```bash
-Enter passphrase for key '~/.ssh/id_dsa':
+Enter passphrase for key '~/.ssh/id_rsa':
 ```
 
-Finally, it’s a good idea to change the permissions of the `~/.ssh` directory and the `~/.ssh/id_dsa` file on your local machine.
+Finally, it’s a good idea to change the permissions of the `~/.ssh` directory and the `~/.ssh/id_rsa` file on your local machine.
 
 ```bash
 chmod 700 ~/.ssh
-chmod 600 ~/.ssh/id_dsa
+chmod 600 ~/.ssh/id_rsa
 ```
 
 Changing permissions in this way disables any outside access to your private key.
