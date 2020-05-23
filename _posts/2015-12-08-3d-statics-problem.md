@@ -23,6 +23,9 @@ import numpy as np
 # Mass on a string (kg)
 m = 410
 
+# Acceleration of gravity (m/s^2)
+g = 9.81
+
 # Position vectors of each point
 # (Point G is where the mass string is tied to the boom)
 A = np.array([ 0.00, 0.0, 2.7])
@@ -35,7 +38,7 @@ G = np.array([ 0.55, 0.0, 2.7])
 
 ```python
 # Weight force vector
-W = np.array([0, -m*9.81, 0])
+W = np.array([0, -m*g, 0])
 
 # Radius vectors
 OA = A
