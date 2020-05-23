@@ -209,6 +209,16 @@ To learn more visit the [OpenSSH docs](http://www.openbsd.org/cgi-bin/man.cgi?qu
 
 To increase the security of your SSH session, or to set up passwordless authentication, you can enable SSH’s built-in [public-key cryptography](http://en.wikipedia.org/wiki/Public-key_cryptography). Then, instead of entering the `remoteuser`'s password on each login attempt, SSH will initiate a challenge-and-response protocol which attempts to match an encrypted public key (stored on the server) with a protected private key (stored on the local machine). This completely eliminates the need to send sensitive information (like a password) over the network, encrypted or not.
 
+### Generating SSH Keys
+
+First, it's a good idea to check for exitings SSH keys on your local machine, because you don't want to overwrite anything. Run the following:
+
+```bash
+ls -al ~/.ssh/id_*.pub
+```
+
+If you see `No such file or directory` or `no matches found` it means that there are no existiing SSH keys, so you can go ahead and create a new one. If you already have an existing key, skip to the next section.
+
 To generate a public/private key pair on your local machine, open a terminal and type:
 
 ```bash
@@ -246,6 +256,8 @@ Your public key has been saved in ~/.ssh/id_rsa.pub.
 The key fingerprint is:
 42:ac:8a:81:31:81:e5:7b:d2:01:42:2d:64:32:0f:dd localuser@localhost
 ```
+
+### Copying your SSH Keys
 
 Now copy your public key, which is stored in the local file `~/.ssh/id_rsa.pub` to the remote machine, by running the following command from a _local terminal session:_
 
