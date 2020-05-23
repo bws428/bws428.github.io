@@ -7,7 +7,7 @@ categories: Engineering
 tags: [python, jupyter]
 ---
 
-The following three-dimensional statics problem is taken from the book _Engineering Mechanics: Statics_, 8th edition, by J. L. Meriam, et al. The solution algorithm was created using the [Jupyter Notebook](http://jupyter.org) and the Python programming language.
+The following three-dimensional statics problem is taken from the book [Engineering Mechanics: Statics](https://www.amazon.com/Engineering-Mechanics-Statics-Eighth-Version/dp/1119044677/), 8th edition, by J. L. Meriam, et al. The solution algorithm was created using the [Jupyter Notebook](http://jupyter.org) and the Python programming language.
 
 ## Problem 3/076
 
