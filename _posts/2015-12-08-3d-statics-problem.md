@@ -100,8 +100,10 @@ Oz = -T_AC * uAC[2] - T_BD * uBD[2] - T_BE * uBE[2]
 
 ```python
 # Final results
-print("T_AC = {:0.1f} N\nT_BD = {:0.1f} N\nT_BE = {:0.1f} N\n".format(T_AC,T_BD,T_BE))
-print("Ox = {:0.1f} N \nOy = {:0.1f} N \nOz = {:0.1f} N".format(Ox,Oy,Oz))
+print("T_AC = {:06.1f} N\nT_BD = {:06.1f} N\nT_BE = {:06.1f} N\n"
+      .format(T_AC,T_BD,T_BE))
+print("Ox = {:06.1f} N \nOy = {:01.1f} N \nOz = {:06.1f} N"
+      .format(Ox,Oy,Oz))
 ```
 
     T_AC =  6606.0 N
