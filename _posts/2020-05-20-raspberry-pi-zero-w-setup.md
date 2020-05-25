@@ -78,7 +78,7 @@ Be sure to:
 - Replace `SSID` with the SSID name of your WiFi network.
 - Replace `PASSWORD` with the WPA2 password for your network.
 
-That's it! Close the file and save it.
+That's it! Save the file and close it.
 
 ### Enable SSH
 
@@ -103,7 +103,7 @@ Again in the `boot` directory, open the `config.txt` file in your text editor. T
 enable_uart=1
 ```
 
-Close the file and save it.
+Save the file and close it.
 
 ## Preflight Check
 
