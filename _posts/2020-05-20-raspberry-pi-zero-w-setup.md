@@ -152,7 +152,7 @@ Once you've updated all the software, you should run:
 sudo raspi-config
 ```
 
-This will brin up the Raspberry Pi Software Configuration Tool, which will allow you to complete most of the configuration you'll need to do before starting a project or installing other software.
+This will bring up the Raspberry Pi Software Configuration Tool, which will allow you to complete most of the configuration you'll need to do before starting a project or installing other software.
 
 {% include image.html file="config.png" description="Raspberry Pi Software Configuration Tool" %}
 
