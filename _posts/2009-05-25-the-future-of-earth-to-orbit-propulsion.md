@@ -51,7 +51,7 @@ However, in commercial space, as in most business ventures, cost is the primary 
 
 Many are also obsessed with the idea of flying into space. Why put wings on a space launch vehicle? Perhaps because there are so many airplane pilots in important positions. Perhaps because the Air Force runs the space end of national defense. Perhaps because NASA wants a bigger role for the first A in its name.
 
-The only justification is the unproven (and I believe unfounded) assumption that if the configuration looks and acts like an airplane, it will have operating costs like an airliner's. This is the argument that NASA used for the Space Shuttle, but there was no background of experience to support that assumption. It has been proven to be a very costly error: The Space Shuttle represents a truly marvelous implementation of an absolutely absurd concept. Its development and use have cost some $20—$40 billion, and it has set back economical access to space about 35 years.
+The only justification is the unproven (and I believe unfounded) assumption that if the configuration looks and acts like an airplane, it will have operating costs like an airliner's. This is the argument that NASA used for the Space Shuttle, but there was no background of experience to support that assumption. It has been proven to be a very costly error: The Space Shuttle represents a truly marvelous implementation of an absolutely absurd concept. Its development and use have cost some \$20—\$40 billion, and it has set back economical access to space about 35 years.
 
 ## Shuttle's costly lessons
 
