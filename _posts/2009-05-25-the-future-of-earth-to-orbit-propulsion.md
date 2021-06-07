@@ -4,12 +4,8 @@ image:
 categories: spaceflight
 tags:
 ---
-by Robert C. Truax, January 1999
 
-Copyright © 2000 Aerospace America.   Reprinted with permission.
-
-SpaceX Falcon 1 Launch
-Image credit: SpaceXThe story of turbopump rocket development is an interesting one of trial and error. Many sidelines were explored before the objectives of light weight and high performance were finally attained with the main engines for the Shuttle. Russian rocket development followed a somewhat similar path, and the end result was very similar: a topping cycle with high combustion chamber pressures.
+The story of turbopump rocket development is an interesting one of trial and error. Many sidelines were explored before the objectives of light weight and high performance were finally attained with the main engines for the Shuttle. Russian rocket development followed a somewhat similar path, and the end result was very similar: a topping cycle with high combustion chamber pressures.
 But turbopump engines, whether high pressure or low, were a mistake from the very beginning. They simply are not worth what they cost in time and money. In all the early development efforts, pump-fed systems were preceded by a pressure-fed version. In every case, the mission was accomplished and the program goals met before the development of the pump system was completed. After the X-I broke the sound barrier with its pressure-fed rocket engine, who ever heard of the D-558-2 — powered by a pump-fed engine?
 
 Technically simple two-stage launchers with pressure-fed engines and ocean recovery offer the economical operations that have escaped our high-technology turbopump rockets for more than four decades.
@@ -121,6 +117,8 @@ Sea launches and recoveries impose no limit on size. We must build our launchers
 
 We appear to have learned nothing from the Shuttle program, and are getting set to repeat the error. I hope this trend will not prevail.
 
+by Robert C. Truax, January 1999
+Copyright © 2000 Aerospace America.   Reprinted with permission.
 
 Robert C. Truax conceived, organized and directed the U.S. Naval Rocket Project at the U.S. Naval Engineering Experiment Station prior to and during WW II; the Propulsion Laboratory of the Naval Missile Test Center in Point Mugu, 1945-46; the Naval Rocket Test Center in New Jersey, 1949-50; the Advanced Developments Div., Aerojet General, 1959-65; and Truax Engineering, 1965-present. He holds a B.A. in mechanical and aeronautical engineering and a master's degree in nuclear engineering. Truax was president of the American Rocket Society, a predecessor to AIAA, in 1957. He is a Fellow of AIAA and received the Robert H. Goddard Medal for outstanding contributions to rocketry.
 
