@@ -98,7 +98,8 @@ Winged vehicles can land only on very few, very special runways, an infinitesima
 Currently, the single-stage-to-orbit approach has many supporters. But, other parameters being constant, an SSTO vehicle can carry much less payload than one having two stages. A lot of dead weight has to be accelerated to orbital velocity at great cost, only to be brought back through the "thermal thicket" at equally great cost. Single-stage concepts might still have an advantage if the vehicle were simpler. This is not the case with any current concept, and probably never will be. Any SSTO rocket will have much less payload and be much more complex than a two-stage design and has many other serious drawbacks.
 
 Combining SSTO with winged flyback is probably the worst combination of features that could possibly be incorporated into one design. It ignores all existing cost data and replaces hard figures with wishful thinking. Flying into space may be romantic, but it makes no economic sense. One proposed next-generation vehicle repeats all the errors made in the design of the Shuttle. Yet this is the approach on which we propose to spend a billion dollars in the next few years.
-Formula for cheap access to space
+
+## Formula for cheap access to space
 
 Getting into space is a simple problem. It need not be very expensive. It can be done with a simple rocket at very low cost. It takes a lot of energy, but that energy costs only about $6/lb of payload. No new technology at all is needed. But we have to use the right technology, most of which has been around for four or five decades. We must stop trying to do it the hard way. The formula for cheap access to space involves only a few rules:
 
