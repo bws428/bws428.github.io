@@ -6,11 +6,11 @@ tags:
 ---
 
 ### Author's Note
-This is probably my favorite article on rocketry and engineering. I initially found this on Rocketry Online way back in 2001 or 2002, and have re-read it many times since. I was thrilled when I received reprint permission from the editor-in-chief of Aerospace America.
+This is probably my favorite article on rocketry and engineering. I initially found this on [Rocketry Online](https://web.archive.org/web/19970418073902/http://rocketryonline.com/) way back in 2001 or 2002, and have re-read it many times since. I was thrilled when I received reprint permission from the editor-in-chief of AIAA's _Aerospace America_ to publish it on [Principia Labs](https://web.archive.org/web/20130105035514/http://principialabs.com/the-future-of-earth-to-orbit-propulsion/).
 
-I love how Truax uses simple, straightforward, cocktail-napkin calculations to disprove the “logic” of our current national space policy. I purposely included the SpaceX image at the top of the page because I believe that they–more than any existing aerospace venture–are closest to following Truax’s advice, and thus the most likely to succeed where so many others have failed.
+Robert C. Truax conceived, organized and directed the U.S. Naval Rocket Project at the U.S. Naval Engineering Experiment Station prior to and during WW II; the Propulsion Laboratory of the Naval Missile Test Center in Point Mugu, 1945-46; the Naval Rocket Test Center in New Jersey, 1949-50; the Advanced Developments Div., Aerojet General, 1959-65; and Truax Engineering, 1965-present. He holds a B.A. in mechanical and aeronautical engineering and a master's degree in nuclear engineering. Truax was president of the American Rocket Society, a predecessor to AIAA, in 1957. He is a Fellow of AIAA and received the Robert H. Goddard Medal for outstanding contributions to rocketry.
 
-This article was originally published on [Principia Labs](https://web.archive.org/web/20130105035514/http://principialabs.com/the-future-of-earth-to-orbit-propulsion/).
+I love how Truax uses simple, straightforward, cocktail-napkin calculations to disprove the “logic” of our current national space policy.
 
 ### The Future of Earth-to-Orbit Propulsion
 
@@ -126,9 +126,3 @@ Getting into space is a simple problem. It need not be very expensive. It can be
 Sea launches and recoveries impose no limit on size. We must build our launchers big to achieve the really important uses for space, such as orbiting solar power stations, space factories, and manned missions to the planets. The technology to get us into space for $30/lb has been around for 40 years. In our infatuation with "high tech," we have simply refused to recognize it. We should throw out 90% of the "improvements" in liquid rockets made in the last four decades, refine pressure-fed rockets a little, and apply the technology of the '50s to recovering both vehicles as well as payloads.
 
 We appear to have learned nothing from the Shuttle program, and are getting set to repeat the error. I hope this trend will not prevail.
-
----
-
-Robert C. Truax conceived, organized and directed the U.S. Naval Rocket Project at the U.S. Naval Engineering Experiment Station prior to and during WW II; the Propulsion Laboratory of the Naval Missile Test Center in Point Mugu, 1945-46; the Naval Rocket Test Center in New Jersey, 1949-50; the Advanced Developments Div., Aerojet General, 1959-65; and Truax Engineering, 1965-present. He holds a B.A. in mechanical and aeronautical engineering and a master's degree in nuclear engineering. Truax was president of the American Rocket Society, a predecessor to AIAA, in 1957. He is a Fellow of AIAA and received the Robert H. Goddard Medal for outstanding contributions to rocketry.
-
----
