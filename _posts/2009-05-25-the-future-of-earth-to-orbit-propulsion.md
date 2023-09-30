@@ -1,6 +1,6 @@
 ---
 title: The Future of Earth-to-Orbit Propulsion
-image: 
+image: assets/images/falcon-9.jpg
 categories: rocketry
 tags:
 ---
